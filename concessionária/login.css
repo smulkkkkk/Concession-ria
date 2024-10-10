@@ -1,0 +1,101 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f0f0f0;
+
+}
+
+
+.container {
+
+    width: 80%;
+
+    margin: 40px auto;
+
+    text-align: center;
+
+}
+
+
+.login-box {
+
+    background-color: #fff;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+
+}
+
+
+.btn-google, .btn-facebook, .btn-email, .btn-register {
+
+    background-color: #4CAF50;
+
+    color: #fff;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+}
+
+
+.btn-google:hover, .btn-facebook:hover, .btn-email:hover, .btn-register:hover {
+
+    background-color: #3e8e41;
+    text-align: center;
+
+
+}
+
+
+.popup {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+
+}
+.btn-submit img {
+
+    width: 20px; /* adjust the width to your liking */
+  
+    height: 20px; /* adjust the height to your liking */
+  
+    vertical-align: middle; /* to align the image with the button text */
+  
+    margin-right: 5px; /* add some space between the image and the button text */
+  
+  }

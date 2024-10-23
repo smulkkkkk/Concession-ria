@@ -1,0 +1,7 @@
+CREATE TABLE carros (
+  id mediumint(4) NOT NULL,
+  modelo varchar(20) NOT NULL,
+  marca varchar(15) NOT NULL,
+  ano varchar(10) NOT NULL,
+  preco tinyint(1) NOT NULL DEFAULT 0
+)

@@ -1,0 +1,20 @@
+
+CREATE TABLE usuarios (
+  id mediumint(4) NOT NULL,
+  nome varchar(20) NOT NULL,
+  login varchar(15) NOT NULL,
+  senha varchar(10) NOT NULL,
+  adm tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO usuarios (id, nome, login, senha, adm) VALUES
+(1, 'Fulano', 'fulano', '123456', 1),
+(2, 'Beltrano', 'beltrano', '1234', 0),
+(3, 'Ciclano', 'ciclano', '654321', 0);
+
+ALTER TABLE usuarios
+  ADD PRIMARY KEY (id),
+  ADD UNIQUE KEY login (login);
+
+  ALTER TABLE usuarios
+  MODIFY id mediumint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;

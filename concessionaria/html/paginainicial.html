@@ -1,0 +1,82 @@
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+        .icon {
+            font-size: 24px;
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            border: 1px solid #000;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .popup a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid #ddd;
+        }
+        .popup a:last-child {
+            border-bottom: none;
+        }
+        .popup a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="icon-container" onclick="togglePopup()">
+        <i class="fas fa-user icon"></i>
+        <div class="popup" id="popup">
+            <a href="#">Trocar conta</a>
+            <a href="#">Agendar horário</a>
+            <a href="#">Sair da conta</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById('popup');
+            if (popup.style.display === 'none' || popup.style.display === '') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+
+        // Close the popup if clicked outside
+        window.onclick = function(event) {
+            var popup = document.getElementById('popup');
+            if (!event.target.closest('.icon-container')) {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
